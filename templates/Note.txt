@@ -1,0 +1,1 @@
+Note: This index.html file should be in templates directory in order to be used by the flask file app.py
