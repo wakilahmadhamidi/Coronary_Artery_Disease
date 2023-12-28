@@ -14,16 +14,12 @@ The project employs various machine learning algorithms, including Logistic Regr
 
 # How to Use
 Clone the repository to your local machine:
-bash
-Copy code
 git clone https://github.com/yourusername/heart-disease-prediction.git
+
 Install the required dependencies:
-bash
-Copy code
 pip install -r requirements.txt
-Run the prediction script:
-bash
-Copy code
+
+Run the app.py
 python app.py
 
 Enter the required health parameters when prompted, and the model will provide a prediction regarding the likelihood of Coronary Artery Disease.
