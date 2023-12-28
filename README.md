@@ -43,3 +43,6 @@ Note: For more details, we will publish our research paper soon, and provide the
 
 This is a research based project, for my bachelor degree course in Computer Science & Engineering
 Wakil Ahmad Hamidi
+
+follow on Github:https://github.com/wakilahmadhamidi
+follow on LinkedIn: https://www.linkedin.com/in/wakil-ahmad-hamidi-34aa37174/
