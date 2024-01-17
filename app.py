@@ -25,10 +25,10 @@ def predict():
        exercise_angina, oldpeak, ST_slope]])  
     pred = model.predict(arr)  
     if pred == 0:  
-        res_val = "No Coronary Artery Disease"  
+        res_val = "Have No Coronary Artery Disease\nCongrats You Are Safe!"  
     else:  
-        res_val = "Coronary Artery Disease"  
-    return render_template('index.html', prediction_text='The Patient Has {}'.format(res_val))  
+        res_val = "Have Coronary Artery Disease\nPlease Consult the Doctor"  
+    return render_template('index.html', prediction_text='You {}'.format(res_val))  
 
 if __name__ == "__main__":  
     app.run(debug=True) 
