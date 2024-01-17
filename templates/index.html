@@ -2,145 +2,154 @@
 <html class="no-js" lang="zxx">
     <head>
         <!-- Meta Tags -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="Site keywords here">
-		<meta name="description" content="">
-		<meta name='copyright' content=''>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="keywords" content="Site keywords here">
+      <meta name="description" content="">
+      <meta name='copyright' content=''>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
-		<!-- Title -->
-        <title>Heart Disease Prediction</title>
+		  <!-- Title -->
+      <title>Heart Disease Prediction</title>
 		
-		<!-- Favicon -->
-        <link rel="icon" href="../img/OD+LOGO.png">
+		  <!-- Favicon -->
+      <link rel="icon" href="../img/OD+LOGO.png">
 
-		<style>
-			/* Added Form CSS */
-		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+		  <style>
+		    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-		* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-  }
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+        }
 
-	body {
-		background: url("https://cdn.pixabay.com/photo/2022/12/19/06/57/stethoscope-7664837_960_720.jpg") no-repeat top center;
-		padding: 0 10px;
-		background-size: cover;
-	}
+        body {
+          background: url("https://cdn.pixabay.com/photo/2022/12/19/06/57/stethoscope-7664837_960_720.jpg") no-repeat top center;
+          padding: 0 10px;
+          background-size: cover;
+        }
 
-	.navbar {
-		overflow: hidden;
-		background-color: #333;
-	}
+        .navbar {
+          overflow: hidden;
+          background-color: #333;
+        }
 
-	.navbar a {
-		float: right;
-		display: block;
-		color: white;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-	}
+        .navbar a {
+          float: right;
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
 
-	.navbar a:hover {
-		background-color: #ddd;
-		color: black;
-	}
+        .navbar a:hover {
+          background-color: #ddd;
+          color: black;
+        }
 
-		.wrapper {
-		max-width: 600px;
-		width: 100%;
-		background: #1a76d1a7;
-		margin: 20px auto;
-		padding: 30px;
-		box-shadow: 1px 1px 2px rgba(0, 0, 0, 1.25);
-		}
+        .wrapper {
+        max-width: 600px;
+        width: 100%;
+        background: #1a76d1a7;
+        margin: 20px auto;
+        padding: 30px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 1.25);
+        }
 
-		.wrapper .title {
-		font-size: 24px;
-		font-weight: 700;
-		margin-bottom: 25px;
-		color: #fec107;
-		text-transform: uppercase;
-		text-align: center;
-		}
+        .wrapper .title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        text-align: center;
+        }
 
-		.wrapper .form {
-		width: 100%;
-		}
+        .wrapper .form {
+        width: 100%;
+        }
 
-		.wrapper .form .input_field {
-		margin-bottom: 15px;
-		display: flex;
-		align-items: center;
-		}
+        .wrapper .form .input_field {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        }
 
-		.wrapper .form .input_field label {
-		width: 80px;
-		font: bold;
-		color: rgb(255, 255, 255);
-		margin-right: 10px;
-		font-size: 14px;
-		}
+        .wrapper .form .input_field label {
+        width: 80px;
+        font: bold;
+        color: rgb(255, 255, 255);
+        margin-right: 10px;
+        font-size: 14px;
+        }
 
-		.wrapper .form .input_field input {
-		width: 100px;
-		}
+        .wrapper .form .input_field input {
+        width: 100px;
+        }
 
-		.wrapper .form .input_field .textarea {
-		resize: none;
-		height: 250px;
-		width: 600px;
-		}
-	/* Added Form CSS */
-		</style>
+        .wrapper .form .input_field .textarea {
+        resize: none;
+        height: 250px;
+        width: 600px;
+        }
+	
+		  </style>
 		
     </head>
     <body>
-		<div class="navbar">
-			<a href="#">Home</a>
-			<a href="#">About</a>
-			<a href="#">Services</a>
+		  <div class="navbar">
+        <a href="https://github.com/wakilahmadhamidi/Heart_Disease_Detection/blob/main/README.md">Home</a>
+        <a href="https://github.com/wakilahmadhamidi/Coronary_Artery_Disease/blob/main/README.md">About</a>
+        <a href="https://github.com/wakilahmadhamidi/Online_Doctor_Plus/blob/main/README.md">Services</a>
 		  </div>
+      <br>
+      <marquee behavior="scroll" direction="left" scrollamount="7">🚨 Prioritize Your Health: Choose Heart-Friendly Foods, Stay Active Daily, Manage Stress and Schedule Regular Check-ups. Your Heart Deserves the Best Care! ❤️ Online Doctor Plus Provides You Free Check-ups for the same 👨‍⚕️</marquee>
 		  <form action="{{ url_for('predict')}}" method="post">
-			<div class="wrapper">
+			  <div class="wrapper">
 			  <div class="title">
-				<h1 style="color: white;">Heart Disease Prediction</h1>
-			</div> 
-  <form action="{{ url_for('predict')}}" method="post">
-    <div class="wrapper">
-      <div class="title">
-        <h1 style="color: white;">Coronary Artery Disease</h1>
-      </div> 
-     <div class="form">  
+				  <h1 style="color: white;">Heart Disease Prediction</h1>
+			  </div> 
+        <form action="{{ url_for('predict')}}" method="post">
+          <div class="wrapper">
+            <div class="title">
+              <h1 style="color: white;">Coronary Artery Disease</h1>
+            </div> 
+        <div class="form">  
        <div class="input_field">  
          <textarea style="color: white; background: rgba(0, 0, 0, 0.3);" class="textarea" readonly>   
  Attributes Explanation: 
-
+ -----------------------------------------------------------------------------------------
  Age: The age of the patient in years.
+ -----------------------------------------------------------------------------------------
  Sex: The gender of the patient (1 = male, 0 = female) 
+ -----------------------------------------------------------------------------------------
  Chest-pain type: The type of chest-pain experienced by the patient in following format :  
  0 = typical angina  
  1 = atypical angina  
  2 = non — anginal pain 
-  <!-- (age, sex	chest pain type	resting bp s	cholesterol	fasting blood sugar	resting ecg	max heart rate	exercise angina	oldpeak	ST slope) -->
  3 = asymptotic  
+ -----------------------------------------------------------------------------------------
  Resting Blood Pressure: The resting blood pressure value of the patient in mmHg (unit)  
+ -----------------------------------------------------------------------------------------
  Cholesterol: The serum cholesterol in mg/dl (unit)  
+ -----------------------------------------------------------------------------------------
  Fasting Blood Sugar: The fasting blood sugar value of an individual with (120mg/dl)  
  If fasting blood sugar > 120mg/dl then: (1 = true, : 0 = false) 
+ -----------------------------------------------------------------------------------------
  Resting ECG: The resting electrocardiographic results  
  0 = normal  
  1 = having ST-T wave abnormality  
  2 = left ventricular hypertrophy  
- Max heart rate: The max heart rate achieved by the patient.  
+ -----------------------------------------------------------------------------------------
+ Max heart rate: The max heart rate achieved by the patient.
+ -----------------------------------------------------------------------------------------  
  Exercise Angina:  (1 = yes, 0 = no) 
+ -----------------------------------------------------------------------------------------
  Oldpeak: The depression induced by exercise relative to rest, is the value which is an integer or float.  
+ -----------------------------------------------------------------------------------------
  ST Slope:  
  1 = up sloping  
  2 = flat  
@@ -214,6 +223,7 @@
           </div>  
         </div>  
       </div>  
-    </form>  
+    </form>
+    <p style="text-align: center;">All Rights Reserved © 2024 <a href="https://www.linkedin.com/in/wakil-ahmad-hamidi-34aa37174/">Wakil Ahmad Hamidi</a></p>
   </body>
 </html>
