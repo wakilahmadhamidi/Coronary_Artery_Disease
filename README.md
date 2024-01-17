@@ -20,7 +20,6 @@ Install the required dependencies:
 pip install -r requirements.txt
 
 Run the app.py
-python app.py
 
 Enter the required health parameters when prompted, and the model will provide a prediction regarding the likelihood of Coronary Artery Disease.
 Results
