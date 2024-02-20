@@ -35,12 +35,12 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 # Acknowledgments
 The project acknowledges the importance of early detection in managing Coronary Artery Disease.
 Thanks to the open-source community for their contributions to machine learning libraries used in this project.
-Thanks to IEEE for providing a comprehensive CAD Dataset for free
+Thanks to IEEE DataPort for providing a comprehensive CAD Dataset for free
 Feel free to use this README template for your GitHub project and customize it according to your project's specifics.
 
 Note: For more details, we will publish our research paper soon, and provide the link here.
 
-This is a research based project, for my bachelor degree course in Computer Science & Engineering
+This is a research based project
 Wakil Ahmad Hamidi
 
 follow on Github:https://github.com/wakilahmadhamidi
