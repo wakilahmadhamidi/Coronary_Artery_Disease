@@ -8,15 +8,13 @@
       <meta name="description" content="">
       <meta name='copyright' content=''>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
+
 		  <!-- Title -->
       <title>Heart Disease Prediction</title>
-		
+
 		  <!-- Favicon -->
       <link rel="icon" href="../img/OD+LOGO.png">
       <link rel="stylesheet" href="static/styles.css">
-
-		
     </head>
     <body>
 		  <div class="navbar">
@@ -25,124 +23,114 @@
         <a href="https://github.com/wakilahmadhamidi/Online_Doctor_Plus/blob/main/README.md">Services</a>
 		  </div>
       <br>
-      <marquee behavior="scroll" direction="left" scrollamount="7">🚨 Prioritize Your Health: Choose Heart-Friendly Foods, Stay Active Daily, Manage Stress and Schedule Regular Check-ups. Your Heart Deserves the Best Care! ❤️ Online Doctor Plus Provides You Free Check-ups for the same 👨‍⚕️</marquee>
+      <marquee behavior="scroll" direction="left" scrollamount="7">🚨 Prioritize Your Health: Choose Heart-Friendly Foods, Stay Active Daily, Manage Stress and Schedule Regular Check-ups. Your Heart Deserves the Best Care! ❤️ Alshifa+ Provides You Free Check-ups for the same 👨‍⚕️</marquee>
 		  <form action="{{ url_for('predict')}}" method="post">
 			  <div class="wrapper">
 			  <div class="title">
 				  <h1 style="color: white;">Heart Disease Prediction</h1>
-			  </div> 
+			  </div>
         <form action="{{ url_for('predict')}}" method="post">
           <div class="wrapper">
             <div class="title">
               <h1 style="color: white;">Coronary Artery Disease</h1>
-            </div> 
-        <div class="form">  
-       <div class="input_field">  
-         <textarea style="color: white; background: rgba(0, 0, 0, 0.3);" class="textarea" readonly>   
- Attributes Explanation: 
- -----------------------------------------------------------------------------------------
+            </div>
+        <div class="form">
+       <div class="input_field">
+         <textarea style="color: white; background: rgba(0, 0, 0, 0.3);" class="textarea" readonly>
+ Attributes Explanation:
+
  Age: The age of the patient in years.
- -----------------------------------------------------------------------------------------
- Sex: The gender of the patient (1 = male, 0 = female) 
- -----------------------------------------------------------------------------------------
- Chest-pain type: The type of chest-pain experienced by the patient in following format :  
- 0 = typical angina  
- 1 = atypical angina  
- 2 = non — anginal pain 
- 3 = asymptotic  
- -----------------------------------------------------------------------------------------
- Resting Blood Pressure: The resting blood pressure value of the patient in mmHg (unit)  
- -----------------------------------------------------------------------------------------
- Cholesterol: The serum cholesterol in mg/dl (unit)  
- -----------------------------------------------------------------------------------------
- Fasting Blood Sugar: The fasting blood sugar value of an individual with (120mg/dl)  
- If fasting blood sugar > 120mg/dl then: (1 = true, : 0 = false) 
- -----------------------------------------------------------------------------------------
- Resting ECG: The resting electrocardiographic results  
- 0 = normal  
- 1 = having ST-T wave abnormality  
- 2 = left ventricular hypertrophy  
- -----------------------------------------------------------------------------------------
+
+ Sex: The gender of the patient (1 = male, 0 = female)
+
+ Chest-pain type: The type of chest-pain experienced by the patient in following format :
+ 0 = typical angina
+ 1 = atypical angina
+ 2 = non — anginal pain
+ 3 = asymptotic
+
+ Resting Blood Pressure: The resting blood pressure value of the patient in mmHg (unit)
+
+ Cholesterol: The serum cholesterol in mg/dl (unit)
+
+ Fasting Blood Sugar: The fasting blood sugar value of an individual with (120mg/dl)
+ If fasting blood sugar > 120mg/dl then: (1 = true, : 0 = false)
+
+ Resting ECG: The resting electrocardiographic results
+ 0 = normal
+ 1 = having ST-T wave abnormality
+ 2 = left ventricular hypertrophy
+
  Max heart rate: The max heart rate achieved by the patient.
- -----------------------------------------------------------------------------------------  
- Exercise Angina:  (1 = yes, 0 = no) 
- -----------------------------------------------------------------------------------------
- Oldpeak: The depression induced by exercise relative to rest, is the value which is an integer or float.  
- -----------------------------------------------------------------------------------------
- ST Slope:  
- 1 = up sloping  
- 2 = flat  
- 3 = down sloping  
-           </textarea>  
-        </div>  
-       <div class="input_field">  
-         <label>AGE</label>  
-         <input type="number" id="age" min="0" max="150" name="age" class="input_text">  
-         <br/>  <i style="font-size: 10px; color: white;">(Age: 1 - 150)</i>  
-       </div>  
-       <div class="input_field">  
-         <label>SEX</label>  
-          <input type="number" min="0" max="1" name="sex" id="sex" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Male: 1 & Female: 0)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>CHEST PAIN TYPE</label>  
-          <input type="number" name="chest pain type" id="cp" min="0" max="3" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Enter Single Value From Range 0-3)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>RESTING BPS</label>  
-          <input name="resting bp s" id="trestbps" type="number" min="0" step="1" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Enter Non-Decimal Value)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>CHOL</label>  
-          <input name="cholesterol" id="chol" type="number" min="0" step="1" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Enter Non-Decimal Value)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>FASTING BLOOD SUGAR</label>  
-          <input type="number" min="0" max="1" name="fasting blood sugar" id="fbs" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(1 = True; 0 = False)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>RESTING ECG</label>  
-          <input type="number" name="resting ecg" min="0" max="2" id="restecg" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Enter Single Value From Range 0-2)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>MAX HEART RATE</label>  
-          <input name="max heart rate" id="thalach" type="number" min="0" step="1" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Enter Non-Decimal Value)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>EXERCISE ANGINA</label>  
-          <input type="number" min="0" max="1" name="exercise angina" id="exang" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Exercise: 1 = YES; 0 = NO)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>OLDPEAK</label>  
-          <input name="oldpeak" id="oldpeak" type="number" min="0" step="0.01" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Enter Decimal Value)</i>  
-        </div>  
-        <div class="input_field">  
-         <label>ST SLOPE</label>  
-          <input type="number" min="0" max="2" name="ST slope" id="slope" class="input_text">  
-          <br/>  <i style="font-size: 10px; color: white;">(Enter Single Value From Range 0-2)</i>  
-        </div>   
-          <div class="input_field">  
-            <input type="submit" style="color:black; background: skyblue;" id="submit" value="SUBMIT">  
-          </div>  
-          <div>  
-            <center>  
-              <h2 style="color: white; margin-bottom:10px;">  
-                {{prediction_text}}  
-              </h2>  
-            </center>  
-          </div>  
-        </div>  
-      </div>  
+
+ Exercise Angina:  (1 = yes, 0 = no)
+
+ Oldpeak: The depression induced by exercise relative to rest, is the value which is an integer or float.
+
+ ST Slope:
+ 1 = up sloping
+ 2 = flat
+ 3 = down sloping
+           </textarea>
+        </div>
+       <div class="input_field">
+         <label>AGE</label>
+         <input type="number" id="age" min="0" max="150" name="age" class="input_text" placeholder="Age: (1 - 150)">
+       </div>
+       <div class="input_field">
+         <label>SEX</label>
+          <input type="number" min="0" max="1" name="sex" id="sex" class="input_text" placeholder="Male = 1 or Female = 0">
+        </div>
+        <div class="input_field">
+         <label>CHEST PAIN TYPE</label>
+          <input type="number" name="chest pain type" id="cp" min="0" max="4" class="input_text" placeholder="Enter a Value (0-4)">
+        </div>
+        <div class="input_field">
+         <label>RESTING BPS</label>
+          <input name="resting bp s" id="trestbps" type="number" min="0" step="1" class="input_text" placeholder="Enter Non-Decimal Value">
+        </div>
+        <div class="input_field">
+         <label>CHOL</label>
+          <input name="cholesterol" id="chol" type="number" min="0" step="1" class="input_text" placeholder="Enter Non-Decimal Value">
+        </div>
+        <div class="input_field">
+         <label>FASTING BLOOD SUGAR</label>
+          <input type="number" min="0" max="1" name="fasting blood sugar" id="fbs" class="input_text" placeholder="True = 1 or False = 0">
+        </div>
+        <div class="input_field">
+         <label>RESTING ECG</label>
+          <input type="number" name="resting ecg" min="0" max="2" id="restecg" class="input_text" placeholder="Enter a Value (0-2)">
+        </div>
+        <div class="input_field">
+         <label>MAX HEART RATE</label>
+          <input name="max heart rate" id="thalach" type="number" min="0" step="1" class="input_text" placeholder="Enter Non-Decimal Value">
+        </div>
+        <div class="input_field">
+         <label>EXERCISE ANGINA</label>
+          <input type="number" min="0" max="1" name="exercise angina" id="exang" class="input_text" placeholder="Exercise: YES = 1 or NO = 0">
+        </div>
+        <div class="input_field">
+         <label>OLDPEAK</label>
+          <input name="oldpeak" id="oldpeak" type="number" min="0" step="0.01" class="input_text" placeholder="Enter Decimal Value">
+        </div>
+        <div class="input_field">
+         <label>ST SLOPE</label>
+          <input type="number" min="0" max="2" name="ST slope" id="slope" class="input_text" placeholder="Enter a Value (0-2)">
+        </div><br><br>
+          <div class="input_field">
+            <input type="submit" style="color:black; background: skyblue;" id="submit" value="SUBMIT">
+          </div>
+          <div>
+            <center>
+              <h2 style="color: white; margin-bottom:10px;">
+                {{prediction_text}}
+              </h2>
+            </center>
+          </div>
+        </div>
+      </div>
     </form>
+    <br><br>
     <p style="text-align: center;">All Rights Reserved © 2024 <a href="https://www.linkedin.com/in/wakil-ahmad-hamidi-34aa37174/">Wakil Ahmad Hamidi</a></p>
   </body>
 </html>
